@@ -1,37 +1,108 @@
-## Welcome to GitHub Pages
+## Github sayfama hoşgeldiniz.Çay,kahve ne alırsınız ? 
 
-You can use the [editor on GitHub](https://github.com/umutyesildal/mypage/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Bu github page'i öğrenmek adına açılmıştır ama açtıysam bari bi şeyler ekliyim ilerde işime yarar.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Problemin açıklaması
 
-### Markdown
+Programı son adımdan itibaren yazarak çarpımın matrix_mult adlı bir fonksiyonda yazılmasını sağlayın. İşlev aşağıdaki forma sahip olmalıdır:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+void matrix_mult (int * A, int ar, int as, int * B, int br, int bs, int * E, int er, int es);
+
+Burada * A, ilk dizinin pointer'ı
+ar: ilk dizideki satır sayısı
+as: ilk dizideki sütun sayısı
+
+Burada * B, ikinci dizinin pointer'ı
+br: ikinci dizideki satır sayısı
+bs: ikinci dizideki sütun sayısı
+
+Burada * E, sonuç dizisinin pointer'ı
+er: sonuç dizisindeki satır sayısı
+es: sonuç dizisindeki sütun sayısı
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+#include <iostream>
+using namespace std;
 
-- Bulleted
-- List
+void matrix_mult (int *A, int ar, int as, int *B, int br, int bs, int *E, int er, int es){
+    
+         
+    
+    int sum = 0;
+    for (int i = 0; i<ar; i++){
+        for (int k = 0; k<bs; k++){
+            for (int j = 0; j<as; j++){
+                sum = sum + *(A + (i * as + j))* (*(B + (j * bs + k))); // hiermit k?nnen wir werte in den richtigen Array_elemente speichern   
+                }
+                *(E+(i* es + k))=sum ; // hiermit speichern wir die neu gestandene Array 
+                sum = 0; // um in der neue Zeile neue werte speichern zu k?nnen
+                }
+            }
+    
+    
+    for (int i = 0; i<ar; i++){
+        for (int k = 0; k<as; k++){
+            cout << *(E+(i* es + k));
+            if (k<es-1){
+                    cout << " ";
+            }
+        }
+    cout << endl;
+    }
+    
+     
+}
 
-1. Numbered
-2. List
+int main(int argc, char **argv)
+{
+     int a,b,c,d;
+    cin >> a >> b >> c >> d;
+    
+    if (b != c){ // Das eliminiert die Arrays ,die nicht multipliziert werden k?nnen 
+         cout << "falsche eingabe" << endl; 
+         return 0;
+    }
+    
+    
+    int uberprufer=0;
+    int a1[a][b], a2[c][d];
+    
+    for (int i = 0; i<a; i++){
+        for (int j = 0; j<b; j++){
+            uberprufer = scanf("%d",&a1[i][j]); // man kann mit scanf ¸berprufen ,ob die Eingabe g¸ltig ist.
+            if (uberprufer==0){
+                cout << "falsche eingabe" << endl;
+                    return 0;
+                }
+            }
+        }
+    
+    uberprufer=0;
+    
+    for (int i = 0; i<c; i++){
+        for (int j = 0; j<d; j++){
+            uberprufer = scanf("%d",&a2[i][j]); // man kann mit scanf ¸berprufen ,ob die Eingabe g¸ltig ist.
+            if (uberprufer==0){
+                cout << "falsche eingabe" << endl;
+                    return 0;
+                }
+            }
+        }
+        
+        int a3[a][b]={0};
+    
+        
+        
+        matrix_mult(&a1[0][0],a,b,&a2[0][0],c,d,&a3[0][0],a,b);
+    
+	return 0;
+}
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### İletişim
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/umutyesildal/mypage/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Bana mail atmak için [buraya tiklayabilirsiniz](mailto:umut@limebudgie.com)
