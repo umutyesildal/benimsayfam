@@ -20,6 +20,10 @@ Burada * E, sonuç dizisinin pointer'ı
 er: sonuç dizisindeki satır sayısı
 es: sonuç dizisindeki sütun sayısı
 
+
+
+
+
 ```markdown
 
 #include <iostream>
