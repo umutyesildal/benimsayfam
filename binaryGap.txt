@@ -1,0 +1,25 @@
+class Solution {
+    
+    
+    public int solution(int N) {
+        
+        int jetztGap = 0;
+        int finalGap = 0;
+
+    String binaryString = Integer.toBinaryString(N);
+    
+    
+    for(int i=1;i<binaryString.length(); i++){
+        if(binaryString.charAt(i)=='0'){
+            jetztGap++;
+        } else if(binaryString.charAt(i)=='1'){
+          if(jetztGap>finalGap){
+            finalGap = jetztGap;
+            jetztGap= 0;
+          } else { jetztGap = 0;} 
+        } else {}
+    }
+    
+    return finalGap;
+
+    }
