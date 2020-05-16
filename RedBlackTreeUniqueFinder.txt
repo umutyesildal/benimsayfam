@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package inf204llrb;
+import java.io.PrintStream;
+import java.util.Random;
+/**
+ *
+ * @author umuty
+ */
+public class Inf204LLRB { 
+    public static void main(String[] args) {
+    Random random = new Random();    
+    char[] osman = new char[9];
+    String[] ellilik = new String[51];
+    int sira = 0;
+    int uzunluk = 1;
+    ellilik[0] = "ilk";
+    for(int i = 0;i<51;i++){
+    osman[0] = 70;
+    osman[1] = (char) (random.nextInt(75 - 71) + 71);
+    osman[2] = 69;
+    osman[3] = (char) (random.nextInt(68 - 65) + 65);
+    osman[4] = (char) (random.nextInt(89 - 80) + 80);
+    osman[5] = 89;
+    osman[6] = 90;
+    osman[7] = (char) (random.nextInt(78 - 76) + 76);
+    osman[8] = 79;
+       
+    String string = new String(osman);
+    
+    for(int j=0; j<uzunluk; j++) {
+    if(ellilik[j] == string){      
+    }else{
+    ellilik[sira] = string;
+    }
+    
+    }
+    uzunluk++;
+    sira++;
+}
+    
+    for(int sss = 0;sss<uzunluk;sss++){
+        System.out.println(ellilik[sss]);
+    }
+}
+}
