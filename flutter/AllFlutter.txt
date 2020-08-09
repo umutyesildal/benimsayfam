@@ -1,0 +1,102 @@
+Bölüm 6 EP1 :
+
+Stateless widget yaratmak için stless yazıp enter'a bas.
+Hot reload stateless widget içinde çalışır.
+
+	EP2 :
+
+SafeArea widget'ı içinde bulunanları sadece telefonun görünen kısmına taşır.
+margin köşelerden uzaklaşması,EdgeInsets. metodu ile kullanılır.
+
+margin: EdgeInsets.all(20.0) köşelerden 20 pixel uzaklaştırıyor.
+margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+Yukardan 50 yandan 10 pixel uzaklaştırıyor.
+
+Flutter Inspector'dan debug paint basarak görebilirsiniz.
+
+padding, container içindekini container köşelerinden uzaklaştırması.
+
+padding: EdgeInsets.all(20.0)
+
+	EP3 :
+
+Column'un birden fazla çocuğu olduğu için children: <Widget>[] olarak kullanılır
+
+verticalDirection: VerticalDirection.up aşağıdan yukarı sıralar.
+
+mainAxisAlignment: konteynırlar arasındaki boşluklar ve yerlerini belirler.
+mainAxisAlignment: MainAxisAlignment:spaceBetween konteynırları dağıtır.
+
+crossAxisAlignment aynı boyutta olmayan konteynırların yerini ayarlar.
+crossAxisAlignment: CrossAxisAlignment.stretch hepsini aynı boyuta getirir.
+
+konteynırları double.infinity yaparsan sonsuza kadar gider.
+
+	EP4 :
+image eklerken dosyadaysa AssetImage,internetteyse NetworkImage
+
+	EP5 :
+
+font eklerken indir sonra pubspec.yaml a göre ayarla family ismi olur.
+
+letterSpacing harfler arasındaki boşluğu pixel olarak ayarlar.
+
+materialpalette.com 'dan renklerin birbiriyle bağlantısı ve ikonları görebilirsin.
+
+Containerda arada boşluk bırakmak için SizedBox kullan.
+
+	EP 6:
+Container yerine Card widget'ı kullanılabilir.
+ListTile kullanılırsa bir ikon ve text kullanılır.
+
+
+BÖLÜM 7 EP2 :
+
+Overflow olmaması için image çok büyükse, width veya height değiştirilebilir.
+Expanded class, erişilebilir yere class içindekileri yerleştirir.
+
+        Expanded(
+          child: Image(
+            image: AssetImage('images/dice1.png'),
+          ),
+        ),
+
+
+
+2 tane expanded varsa flex kullanılırsa belli katta yer kullanır.
+
+        Expanded(
+          flex: 2, // 2 katı
+          child: Image(
+            image: AssetImage('images/dice1.png'),
+          ),
+        ),
+        Expanded(
+          child: Image(
+            image: AssetImage('images/dice1.png'),
+          ),
+        ),
+
+
+EP3 :
+
+Flutter outline ile (yandaki tuşlar) bir şeyleri center,row,column ile sarabilirsin.
+
+padding ile sararsan padding yapılamayan kısımları da ayarlanır.
+
+
+EP4 :
+
+Flat Button dümdüz buton işte. eğer flatbutton içine başka bir widget koyarsan
+buton o olur.
+
+RaisedButton, elevated button gibi.Hovering on pressed kısımları da var.
+
+EP5 :
+
+var değişkeni ne olursa olsun bir tür için tanımlanır ama sonra değiştirilemez.
+
+
+Text içine yazılıcaksa + ile değil $ ile yapılır.
+
+
