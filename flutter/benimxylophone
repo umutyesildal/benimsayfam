@@ -1,0 +1,109 @@
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:audioplayers/audio_cache.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+
+  static AudioCache player = AudioCache();
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey,
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.purple,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note1.wav');
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.blue.shade900,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note2.wav');
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.blue,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note3.wav');
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.green,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note4.wav');
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.yellow,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note5.wav');
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.orangeAccent,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note6.wav');
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 15.0,
+                  color: Colors.red,
+                  child: FlatButton(
+                    onPressed: (){
+                      player.play('note7.wav');
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
