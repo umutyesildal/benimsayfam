@@ -99,4 +99,16 @@ var değişkeni ne olursa olsun bir tür için tanımlanır ama sonra değiştir
 
 Text içine yazılıcaksa + ile değil $ ile yapılır.
 
+State'i değişen bir widget'a yani hareketli widget'lar için stateful widget kullanılır
+
+stateful widgetlarda setstate() ile state değiştirilebilir.
+
+
+Xylophone app 
+
+kütüphane eklerken başta pub dartlang sitesinden bul, dependency al ve importla !!!
+
+
+Destini alternatif hikaye 
+
 
