@@ -1,6 +1,6 @@
-## Github sayfama hoşgeldiniz.Çay,kahve ne alırsınız ? 
+## Merhaba ben Umut Yunus Yeşildal burada yaptığım kodları depoluyorum. 
 
-Bu github page'i öğrenmek adına açılmıştır ama açtıysam bari bi şeyler ekliyim ilerde işime yarar.
+Çok boş durmasın diye aşağıda bir tane kodum var.
 
 ### Problemin açıklaması
 
@@ -109,4 +109,4 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### İletişim
 
-Bana mail atmak için [buraya tiklayabilirsiniz](mailto:umut@limebudgie.com)
+Bana mail atmak için umutyesildal97@gmail.com kullanabilirsiniz.
